@@ -1,4 +1,4 @@
-[tool.poerty]
+[tool.poetry]
 name = "tg_bot"
 version = "0.1.0"
 description = ""
@@ -6,7 +6,7 @@ authors = ["Nikita-St3n <kuznetsov03n@gmail.com>"]
 readme = "README.md"
 packages = [{inslude = "tg_bot"}]
 
-[tool.poerty.depencies]
+[tool.poetry.depencies]
 python = "^3.10.8"
 aiofiles = "^23.1.0"
 aiogram = "^2.23.1"
