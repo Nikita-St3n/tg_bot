@@ -8,8 +8,8 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.dispatcher import FSMContext
 # TOKEN
-# from dotenv import load_dotenv
-# import os
+from dotenv import load_dotenv
+import os
 
 #
 # KEYBOARD
@@ -31,7 +31,7 @@ i_kb.add(i_kb_1btn, i_kb_2btn, i_kb_3btn)
 # 
 
 storage = MemoryStorage()
-bot = Bot(token="6458916198:AAGtjpNbrrX8XKOUSak9rorLAIcee5gNja8", parse_mode="HTML")
+bot = Bot(token=os.environ.get("TOKEN"), parse_mode="HTML")
 dp = Dispatcher(bot, storage=storage)
 
 class UserState(StatesGroup):
